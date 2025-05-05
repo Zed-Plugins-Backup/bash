@@ -1,8 +1,8 @@
 id = "basher"
 name = "Basher"
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
-description = "Bash support"
+description = "Bash-language-server support"
 repository = "https://github.com/d1y/bash.zed"
 authors = ["d1y <chenhonzhou@gmail.com>"]
 themes = []
