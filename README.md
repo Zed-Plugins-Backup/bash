@@ -12,18 +12,37 @@ The [bash-language-server](https://github.com/bash-lsp/bash-language-server) sup
 But you need to [install it manually](https://github.com/koalaman/shellcheck#installing)
 
 ```bash
-brew install shellcheck
+brew install shellcheck         # macOS
+sudo apt-get install shellcheck # ubuntu/debian
+sudo pacman -S shellcheck       # Arch Linux
+choco install shellcheck        # Windows (chocolatey)
+```
+
+## Shellcheck ignores
+
+If you wish to ignore certain ShellCheck warnings in your files you can add an inline comment `# shellcheck disable=SC0000` specifying the warning/error.
+
+Alternatively, if you'd like to ignore something for an entire file, put the comment at the top of the file.  For example to ignore [SC2034](https://www.shellcheck.net/wiki/SC2034) `foo appears unused. Verify it or export it.` in an `.env` file it would look like so:
+
+```sh
+# shellcheck disable=SC2034
+FOO=123
+BAR="something"
+DATABASE_URL="postgres://something"
 ```
 
 # shfmt
 
-lsp support format
+bash-language-server can support formatting using `shfmt` if it is available in your path.  Install with:
 
-> https://github.com/bash-lsp/bash-language-server/pull/1136
-
-```bash
-go install mvdan.cc/sh/v3/cmd/shfmt@latest
+```sh
+brew install shfmt         # macOS
+sudo apt-get install shfmt # ubuntu/debian
+sudo pacman -S shfmt       # Arch Linux
+choco install shfmt        # Windows (chocolatey)
 ```
+
+To control automatic formatting, in your Zed settings use [`format_on_save`](https://zed.dev/docs/configuring-zed#format-on-save) or manually invoke `editor: format document` from the command palette.
 
 # tldr vs man
 
