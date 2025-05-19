@@ -5,8 +5,6 @@ schema_version = 1
 description = "Bash-language-server support"
 repository = "https://github.com/zed-extensions/bash"
 authors = ["d1y <chenhonzhou@gmail.com>"]
-themes = []
-languages = ["languages/bash"]
 
 [lib]
 kind = "Rust"
